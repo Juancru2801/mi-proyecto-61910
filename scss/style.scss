@@ -1,0 +1,138 @@
+// Importar archivos parciales
+@import '/partials/variables';
+@import '/partials/mixins';
+@import '/partials/reset';
+
+// Estilos específicos para elementos
+h1 {
+  font-size: $font-size-h1;
+  background-color: $color-primary;
+  border-style: solid;
+  margin: 20px 50px 50px 50px;
+  padding: 30px;
+}
+
+h2 {
+  background-color: $color-primary;
+  min-height: 30px;
+  padding: 30px;
+  border-style: solid;
+}
+
+h3 {
+  width: 30vw;
+  height: 50px;
+  padding: $size-gap;
+  border-style: solid;
+}
+
+.wrapper-header {
+  background-color: $color-primary;
+  width: 100%;
+  height: $size-header;
+  min-height: 200px;
+  padding: $size-gap;
+  position: sticky;
+  top: -1;
+}
+
+.navegadores {
+  width: 100%;
+  height: 100px;
+  min-height: 50px;
+  padding: $size-gap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.caja1 {
+  width: 100%;
+  height: 50px;
+  min-height: 200px;
+  padding: $size-gap;
+  display: inline-block;
+  gap: $size-gap;
+}
+
+.container {
+  width: $size-container-width;
+  height: $size-container-height;
+  min-height: 200px;
+  border-style: inset;
+  border-width: 2vh;
+}
+
+.Formulario {
+  width: 100%;
+  height: 20px;
+  min-height: 10px;
+  padding: $size-form-padding;
+  margin-top: $size-gap;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: left;
+  align-items: baseline;
+  gap: $size-gap;
+
+  label {
+    display: inline-block;
+    width: 200px; // Ancho del label ajustable
+  }
+
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: $size-gap;
+    font-size: $font-size-body;
+    margin-top: $size-gap;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    background-color: $color-primary;
+    color: $color-white;
+    border: none;
+    padding: $size-gap 2*$size-gap;
+    border-radius: 4px;
+    font-size: $font-size-body;
+    cursor: pointer;
+  }
+}
+
+.caja-position {
+  background-color: $color-green;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin: 0;
+  font-size: 1.3rem;
+  @include center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+
+  i {
+    color: $color-white;
+    font-size: 2rem;
+  }
+}
+
+.boton-cuadrado {
+  background-color: $color-primary;
+  color: $color-white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: $font-size-body;
+  text-align: center;
+  cursor: pointer;
+}
+
