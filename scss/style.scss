@@ -1,138 +1,203 @@
-// Importar archivos parciales
-@import '/partials/variables';
-@import '/partials/mixins';
-@import '/partials/reset';
+// Definición de variables
+$color-fondo: #858282;
+$color-texto: #ece7e7;
+$color-encabezado: #333;
+$color-boton: #444;
+$color-boton-hover: #555;
+$color-caja: #676464;
+$color-titulos: #555;
 
-// Estilos específicos para elementos
-h1 {
-  font-size: $font-size-h1;
-  background-color: $color-primary;
-  border-style: solid;
-  margin: 20px 50px 50px 50px;
-  padding: 30px;
+// Estilos globales
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $color-fondo;
+    color: $color-texto;
 }
 
-h2 {
-  background-color: $color-primary;
-  min-height: 30px;
-  padding: 30px;
-  border-style: solid;
-}
-
-h3 {
-  width: 30vw;
-  height: 50px;
-  padding: $size-gap;
-  border-style: solid;
+header {
+    background-color: $color-encabezado;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
 }
 
 .wrapper-header {
-  background-color: $color-primary;
-  width: 100%;
-  height: $size-header;
-  min-height: 200px;
-  padding: $size-gap;
-  position: sticky;
-  top: -1;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-.navegadores {
-  width: 100%;
-  height: 100px;
-  min-height: 50px;
-  padding: $size-gap;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
 }
 
-.caja1 {
-  width: 100%;
-  height: 50px;
-  min-height: 200px;
-  padding: $size-gap;
-  display: inline-block;
-  gap: $size-gap;
+nav ul.active {
+    display: flex;
+}
+
+nav li {
+    margin: 0.5rem 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: $color-boton;
+    border-radius: 4px;
+    display: block;
+    text-align: center;
+
+    &:hover {
+        background-color: $color-boton-hover;
+    }
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
+    }
+}
+
+@media (max-width: 720px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav li {
+        margin: 0.5rem 0;
+    }
+}
+
+@media (min-width: 720px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        display: flex;
+    }
+
+    nav li {
+        margin: 0 0.5rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
 }
 
 .container {
-  width: $size-container-width;
-  height: $size-container-height;
-  min-height: 200px;
-  border-style: inset;
-  border-width: 2vh;
+    width: 100%;
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: $color-caja;
+    border: 1px solid #615e5e;
+    border-radius: 4px;
+}
+
+.caja1,
+.caja2,
+article {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    background-color: $color-caja;
 }
 
 .Formulario {
-  width: 100%;
-  height: 20px;
-  min-height: 10px;
-  padding: $size-form-padding;
-  margin-top: $size-gap;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: left;
-  align-items: baseline;
-  gap: $size-gap;
+    margin-bottom: 1rem;
 
-  label {
-    display: inline-block;
-    width: 200px; // Ancho del label ajustable
-  }
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+    }
+}
 
-  input[type="email"],
-  textarea {
+iframe {
     width: 100%;
-    padding: $size-gap;
-    font-size: $font-size-body;
-    margin-top: $size-gap;
-  }
+    height: auto;
+    border: 0;
+}
 
-  input[type="submit"],
-  input[type="reset"] {
-    background-color: $color-primary;
-    color: $color-white;
-    border: none;
-    padding: $size-gap 2*$size-gap;
+footer {
+    background-color: $color-encabezado;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+// Estilos para los títulos
+h1, h2, h3 {
+    background-color: $color-titulos;
+    padding: 0.5rem;
     border-radius: 4px;
-    font-size: $font-size-body;
-    cursor: pointer;
-  }
+    color: white;
+    margin-bottom: 1rem;
 }
 
 .caja-position {
-  background-color: $color-green;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  margin: 0;
-  font-size: 1.3rem;
-  @include center;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 10;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
 
-  i {
-    color: $color-white;
-    font-size: 2rem;
-  }
-}
+    a {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        text-decoration: none;
 
-.boton-cuadrado {
-  background-color: $color-primary;
-  color: $color-white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 4px;
-  text-decoration: none;
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  font-size: $font-size-body;
-  text-align: center;
-  cursor: pointer;
+        &.instagram {
+            background-color: #e4405f;
+            color: white;
+        }
+
+        &.whatsapp {
+            background-color: #25d366;
+            color: white;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
 }
 
