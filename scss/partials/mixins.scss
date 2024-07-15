@@ -1,7 +1,38 @@
 // Mixin para centrar elementos
-@mixin center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin para un botón
+@mixin button-style($bg-color, $text-color) {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: $bg-color;
+  color: $text-color;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+      background-color: darken($bg-color, 10%);
   }
+}
+
+// Mixin para márgenes y padding
+@mixin spacing($margin: 0, $padding: 0) {
+  margin: $margin;
+  padding: $padding;
+}
+
+// Mixin para un borde
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+// Mixin para transición
+@mixin transition($properties) {
+  transition: $properties;
+}
   

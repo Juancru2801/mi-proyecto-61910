@@ -1,22 +1,23 @@
 // Colores
-$color-background: rgb(204, 204, 204);
-$color-primary: grey;
-$color-green: green;
-$color-white: white;
-$color-black: black;
-$color-red: red;
+$color-bg-light: #b1afaf; // Fondo gris claro
+$color-bg-dark: #706f6f; // Fondo gris oscuro
+$color-text-dark: #333; // Texto gris oscuro
+$color-button-bg: #555; // Fondo botones
+$color-button-bg-hover: #777; // Fondo botones hover
+$color-footer-bg: #333; // Fondo pie de página
+$color-footer-text: #fff; // Texto pie de página
 
 // Tamaños
-$size-header: 600px;
-$size-container-width: 30vw;
-$size-container-height: 90vh;
-$size-form-padding: 30px;
-$size-gap: 10px;
+$container-width: 80%; // Ancho del contenedor
+$img-size: 30%; // Ancho de las imágenes
+$border-radius: 10px; // Radio de borde para cajas
+$transition-speed: 0.3s; // Velocidad de transición
 
-// Fuentes
-$font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-$font-size-h1: 40px;
-$font-size-h2: 1.5rem; // Aproximadamente 24px
-$font-size-h3: 1rem; // Aproximadamente 16px
-$font-size-body: 14px;
-$font-size-h4: 14px;
+// Tipografía
+$font-family: 'Arial, sans-serif'; // Tipografía base
+$font-size-base: 16px; // Tamaño de fuente base
+$font-size-small: 14px; // Tamaño de fuente pequeño
+
+// Margen y padding
+$spacing-small: 10px; // Espacio pequeño
+$spacing-medium: 20px; // Espacio medio

@@ -1,47 +1,90 @@
-    <!DOCTYPE html>
-    <html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/style.css">
-        <title>Document</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Contacto</title>
+</head>
 
-    <body>
-        <header>
-            <h1>Contacto</h1>
-            <div class="hamburger" onclick="toggleMenu()">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <nav>
-                <ul id="menu">
-                    <li><a href="../index.html" class="boton-cuadrado">Inicio</a></li>
-                    <li><a href="./nuestostrabajos.html" class="boton-cuadrado">Nuestros Trabajos</li>
-                    <li><a href="./sobrenosotros.html" class="boton-cuadrado">Sobre Nosotros</a></li>
-                    <li><a href="./nuestrocatalogo.html" class="boton-cuadrado">Nuestro Catalogo</a></li>
-                </ul>
-            </nav>
-
-        </header>
-        <hr>
+<body>
+    <header>
+        <h1>Contacto</h1>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <ul id="menu">
+                <li><a href="../index.html" class="boton-cuadrado">Inicio</a></li>
+                <li><a href="./nuestostrabajos.html" class="boton-cuadrado">Nuestros Trabajos</a></li>
+                <li><a href="./sobrenosotros.html" class="boton-cuadrado">Sobre Nosotros</a></li>
+                <li><a href="./nuestrocatalogo.html" class="boton-cuadrado">Nuestro Catálogo</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <main>
         <section>
+            <h2>Redes Sociales</h2>
+            <p>Síguenos en nuestras redes sociales para estar al día con nuestras últimas novedades y promociones.</p>
             <a href="https://www.instagram.com/espaciomica2022/?igsh=MXA4bGpjbG1vZDJ3MQ%3D%3D" target="_blank">Instagram</a>
-        </section>
-        <section>
             <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2Fmessage%2F3V7VZN277UX6J1&e=AT1i2Wfqe3fYH9dYYrFGbgita989muE0VGozMhT6u8NRdgb_lJ7FhDBYDdHQi9KyafwBPxknITM6iNE5ps2i5rOtIjToEceI7qL3mqamZYkSL5a4"
                 target="_blank">WhatsApp</a>
         </section>
+        
         <section>
-            <h2>nos ubicamos</h2>
+            <h2>Ubicación</h2>
+            <p>Nos encontramos en Acevedo 3241, N3300HKQ Posadas, Misiones. Visítanos para conocer más sobre nuestros servicios.</p>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d885.8091656396264!2d-55.90928313045512!3d-27.368323407528873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9457be3c729318df%3A0xbf37cdee8b96fc1d!2sAcevedo%203241%2C%20N3300HKQ%20Posadas%2C%20Misiones!5e0!3m2!1ses-419!2sar!4v1715215316764!5m2!1ses-419!2sar"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
+        
+        <section>
+            <h2>Formulario de Contacto</h2>
+            <p>Rellena el siguiente formulario para ponerte en contacto con nosotros. Te responderemos a la brevedad.</p>
+            <form class="Formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
 
-    </body>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
 
-    </html>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpiar">
+            </form>
+        </section>
+        <section>
+            <h2>Horarios de Atención</h2>
+            <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+            <p>Sábado: 10:00 AM - 4:00 PM</p>
+            <p>Domingo: Cerrado</p>
+        </section>
+        
+        <section>
+            <h2>Información de Contacto</h2>
+            <p>Para cualquier consulta, también puedes comunicarte con nosotros a través de:</p>
+            <ul>
+                <li>Teléfono: +54 9 376 464-1981</li>
+                <li>Email: contacto@espaciomica.com</li>
+                <li>Dirección: Acevedo 3241, N3300HKQ Posadas, Misiones</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Espacio Mica. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>

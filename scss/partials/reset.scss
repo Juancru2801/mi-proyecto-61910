@@ -1,23 +1,39 @@
 // Reset básico
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $font-family;
-  }
-  
-  // Estilos para elementos específicos
-  body {
-    background-color: $color-background;
-  }
-  
-  ul,
-  ol {
-    list-style: none;
-  }
-  
-  a {
-    color: $color-black;
-    text-decoration: none;
-  }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; // Suavizar el desplazamiento
+}
+
+body {
+  line-height: 1.5; // Mejora la legibilidad
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal; // Eliminar el peso de la fuente predeterminado
+}
+
+ul {
+  list-style: none; // Eliminar estilo de listas
+}
+
+a {
+  text-decoration: none; // Eliminar subrayado de enlaces
+  color: inherit; // Heredar color del padre
+}
+
+button {
+  border: none; // Eliminar bordes predeterminados de botones
+  background: none; // Eliminar fondo predeterminado
+  cursor: pointer; // Cambiar el cursor al pasar sobre el botón
+}
+
+input, textarea, select {
+  font-family: inherit; // Heredar la fuente del cuerpo
+}
   

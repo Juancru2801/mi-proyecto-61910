@@ -1,203 +1,202 @@
-// Definición de variables
-$color-fondo: #858282;
-$color-texto: #ece7e7;
-$color-encabezado: #333;
-$color-boton: #444;
-$color-boton-hover: #555;
-$color-caja: #676464;
-$color-titulos: #555;
+// Variables
+$background-color: #b1afaf;
+$text-color: #333;
+$header-background: #706f6f;
+$nav-background: #555;
+$nav-hover: #777;
+$caja1-background: #a7a7a7;
+$caja2-background: #a3a2a2;
+$footer-background: #333;
+$link-color: inherit;
+$link-hover: underline;
 
-// Estilos globales
+// General Styles
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: $color-fondo;
-    color: $color-texto;
+    background-color: $background-color;
+    color: $text-color;
 }
 
-header {
-    background-color: $color-encabezado;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    position: relative;
-}
-
-.wrapper-header {
+img, iframe, video {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    display: none;
-}
-
-nav ul.active {
-    display: flex;
-}
-
-nav li {
-    margin: 0.5rem 0;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    background-color: $color-boton;
-    border-radius: 4px;
-    display: block;
+// Header Styles
+header {
+    background-color: $header-background;
+    padding: 20px;
     text-align: center;
-
-    &:hover {
-        background-color: $color-boton-hover;
-    }
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-
-    div {
-        width: 25px;
-        height: 3px;
-        background-color: white;
-        margin: 4px 0;
-    }
-}
-
-@media (max-width: 720px) {
-    .hamburger {
-        display: flex;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    nav li {
-        margin: 0.5rem 0;
-    }
-}
-
-@media (min-width: 720px) {
-    nav ul {
-        flex-direction: row;
-        justify-content: center;
-        display: flex;
-    }
-
-    nav li {
-        margin: 0 0.5rem;
-    }
-
-    .hamburger {
-        display: none;
-    }
-}
-
-.container {
-    width: 100%;
-    max-width: 600px;
-    margin: 1rem auto;
-    padding: 1rem;
-    background-color: $color-caja;
-    border: 1px solid #615e5e;
-    border-radius: 4px;
-}
-
-.caja1,
-.caja2,
-article {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border: 1px solid #707070;
-    border-radius: 4px;
-    background-color: $color-caja;
-}
-
-.Formulario {
-    margin-bottom: 1rem;
-
-    input,
-    select,
-    textarea {
-        width: 100%;
-        padding: 0.5rem;
-        margin-top: 0.5rem;
-    }
-}
-
-iframe {
-    width: 100%;
-    height: auto;
-    border: 0;
-}
-
-footer {
-    background-color: $color-encabezado;
-    color: white;
-    text-align: center;
-    padding: 1rem;
     position: relative;
-    bottom: 0;
-    width: 100%;
+
+    h1 {
+        margin: 0;
+        color: $text-color;
+    }
 }
 
-// Estilos para los títulos
-h1, h2, h3 {
-    background-color: $color-titulos;
-    padding: 0.5rem;
-    border-radius: 4px;
-    color: white;
-    margin-bottom: 1rem;
+// Navigation Styles
+nav {
+    display: none;
+    margin-top: 10px;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            margin-right: 10px;
+
+            a {
+                text-decoration: none;
+                padding: 10px 15px;
+                background-color: $nav-background;
+                color: #aca9a9;
+                border-radius: 5px;
+
+                &:hover {
+                    background-color: $nav-hover;
+                }
+            }
+        }
+    }
+}
+
+// Main Content
+main {
+    padding: 20px;
+
+    .caja1 {
+        background-color: $caja1-background;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+
+    .container {
+        margin-top: 10px;
+        display: inline-block;
+        vertical-align: top;
+        width: 30%;
+        margin-right: 2%;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .caja2 {
+        margin: 20px 0;
+        padding: 20px;
+        background-color: $caja2-background;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid #ddd;
+        margin: 20px 0;
+    }
+}
+
+// Contact Section
+.instagram, .whatsapp {
+    text-decoration: none;  
+    color: $link-color;
+    font-size: 24px;
+    margin-right: 15px;
 }
 
 .caja-position {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #e0e0e0;
+}
 
-    a {
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-        text-align: center;
-        line-height: 50px;
-        border-radius: 50%;
-        margin-bottom: 10px;
-        text-decoration: none;
+.formulario {
+    margin-bottom: 20px;
+}
 
-        &.instagram {
-            background-color: #e4405f;
-            color: white;
-        }
+label {
+    display: block;
+    margin-bottom: 5px;
+}
 
-        &.whatsapp {
-            background-color: #25d366;
-            color: white;
-        }
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
 
-        &:hover {
-            opacity: 0.8;
-        }
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: $text-color;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $nav-hover;
     }
 }
 
+// Footer Styles
+footer {
+    background-color: $footer-background;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+
+    .footer-section {
+        margin-bottom: 20px;
+
+        h3 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        p,
+        a {
+            margin: 5px 0;
+            color: #fff;
+
+            &:hover {
+                text-decoration: $link-hover;
+            }
+        }
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #fff;
+    }
+    .instagram, .whatsapp {
+        text-decoration: none;
+        color: inherit;
+        font-size: 24px;
+        margin-right: 15px;
+        display: inline-flex;
+        align-items: center;
+    }
+    
+    .instagram i, .whatsapp i {
+        margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+}
